@@ -13,6 +13,7 @@ function compute()
         alert('Enter a positive number')
     }
 
+    //Added this if statement again because Github Pages doesn't recognise "<="
     if (principal < 0) {
         alert('Enter a positive number')
     }
