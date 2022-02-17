@@ -9,7 +9,7 @@ function compute()
     var year = new Date().getFullYear()+parseInt(years);
     
     var principal = document.getElementById("principal").value;
-    if (principal == 0) {
+    if (principal <= 0) {
         alert('Enter a positive number')
     }
     //When Compute Interest is clicked, set its inner html property to the below text
