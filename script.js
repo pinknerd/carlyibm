@@ -7,18 +7,16 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
     var year = new Date().getFullYear()+parseInt(years);
+    
+    var principal = document.getElementById("principal").value;
+    if (principal == 0) {
+        alert('Enter a positive number')
+    }
+    //When Compute Interest is clicked, set its inner html property to the below text
     document.getElementById("result").innerHTML = "If you deposit "+principal+",\<br\>at an interest rate of "+rate+"%\<br\>You will receive an amount of "+amount+",\<br\>in the year "+year+"\<br\>"
 
-    rate.oninput = compute()
-
-    if (principal.value == 0) {
-    alert('Error!')
-    
-    }
 }
-
-function updateRate() 
-{
+function updateRate() {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
+    document.getElementById("rate_val").innerText= rateval;
 }
